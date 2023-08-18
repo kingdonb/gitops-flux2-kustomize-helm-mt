@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: test-kust
+  namespace: cluster-config
+spec:
+  interval: 15m
+  path: "./infrastructure/nginx"
+  prune: true
+  timeout: 1m
+  sourceRef:
+    kind: GitRepository
+    name: cluster-config
+  validation: server
