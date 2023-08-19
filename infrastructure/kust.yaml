@@ -4,10 +4,10 @@ metadata:
   name: test-kust
   namespace: cluster-config
 spec:
-  interval: 15m
+  interval: 1m
   path: "./infrastructure/nginx"
   prune: true
-  timeout: 2m
+  timeout: 1m
   sourceRef:
     kind: GitRepository
     name: cluster-config
